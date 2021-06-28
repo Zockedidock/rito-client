@@ -1,0 +1,8 @@
+.gamebutton {
+  display: flex;
+}
+
+.img-container img {
+  max-height: 100rem;
+  max-width: auto;
+}

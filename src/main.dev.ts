@@ -11,7 +11,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import path from 'path';
-import { app, BrowserWindow, shell } from 'electron';
+import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -69,8 +69,10 @@ const createWindow = async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728,
+    width: 1785,
+    height: 800,
+    resizable: true,
+    frame: false,
     icon: getAssetPath('icon.png'),
     webPreferences: {
       nodeIntegration: true,
@@ -105,6 +107,14 @@ const createWindow = async () => {
     event.preventDefault();
     shell.openExternal(url);
   });
+
+  ipcMain.on('minApp', () => mainWindow?.minimize());
+  ipcMain.on('maxApp', () => {
+    if (mainWindow?.isMaximized()) {
+      mainWindow?.restore();
+    }
+  });
+  ipcMain.on('closeApp', () => mainWindow?.close());
 
   // Remove this if your app does not use auto updates
   // eslint-disable-next-line
