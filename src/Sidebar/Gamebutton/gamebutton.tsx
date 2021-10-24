@@ -18,6 +18,7 @@ class Gamebutton extends React.Component<GamebuttonProps>
   {
     const { gName, gLogo, gLink } = this.props
     return (
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       <NavLink to={gLink!}>
         <div className={`${ gName?.replace(/\s/g, '-') } gamebutton button is-secondary`}>
           <div className="img-container">

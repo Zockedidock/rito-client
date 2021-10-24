@@ -143,7 +143,6 @@ export default merge(baseConfig, {
           },
         ],
       },
-      // WOFF Font
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         use: {

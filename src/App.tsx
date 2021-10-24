@@ -3,8 +3,8 @@
 /* eslint-disable no-console */
 /* eslint-disable global-require */
 import React from 'react';
-import { MemoryRouter, Switch, Route, Redirect } from 'react-router-dom';
-import './App.global.css';
+import { MemoryRouter, Switch, Route } from 'react-router-dom';
+import './App.global.sass';
 import Sidebar from './Sidebar/sidebar';
 import Gamewindow from './GameWindow/gamewindow'
 import Titlebar from './TitleBar/titlebar';
@@ -20,7 +20,6 @@ export default function App()
       <MemoryRouter>
         <Sidebar />
         <Switch>
-          <Redirect to="/league" />
           <Route path="/league">
             <Gamewindow
               name="League of Legends"

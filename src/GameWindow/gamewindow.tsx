@@ -25,13 +25,10 @@ class Gamewindow extends React.Component<GamewindowProps>
     gARG2: string | undefined,
   ) {
     const bat = spawn('cmd.exe', [
-      '/c', // Argument for cmd.exe to carry out the specified script
-      // 'C:/Riot Games/Riot Client/RiotClientServices.exe',  Path to your file
+      '/c',
       gEXE,
       gARG1,
       gARG2,
-      // `--launch-product=${gName}`,  First argument
-      // `--launch-patchline=live`  n-th argument
     ])
     bat.stdout.on('data', (data: any) => {
       // Handle data...

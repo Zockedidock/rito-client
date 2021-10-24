@@ -5,8 +5,16 @@ import React from 'react'
 import AddGame from './addGame';
 import General from './general';
 
+interface SettingsProps {
+  someDefaultValue?: string
+}
+
+interface SettingsStates {
+  tab?: number
+}
+
 export default
-class Settings extends React.Component
+class Settings extends React.Component<SettingsProps, SettingsStates>
 {
   location = 'General'
 
@@ -66,8 +74,8 @@ class Settings extends React.Component
                 </svg>
               </button>
               <button type="button" className="main" onClick={()=>{
-                document.getElementsByClassName("notclick")[0]
-                  .style.display = "none"
+                const s = document.getElementsByClassName("notclick")[0] as HTMLDivElement
+                s.style.display = "none"
               }}>Save</button>
             </div>
           </div>
