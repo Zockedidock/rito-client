@@ -20,7 +20,6 @@ export default function App()
       <MemoryRouter>
         <Sidebar />
         <Switch>
-          <Redirect to="/league" />
           <Route path="/league">
             <Gamewindow
               name="League of Legends"
