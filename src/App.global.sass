@@ -1,0 +1,272 @@
+@import './Hextech-css/dist/hextech.min.css'
+
+// disable selection
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before
+  -webkit-user-select: none
+  user-select: none
+  cursor: default
+
+input,
+button,
+textarea,
+:focus
+  outline: none
+
+
+// disable image and anchor dragging
+a:not([draggable='true']),
+img:not([draggable='true'])
+  -webkit-user-drag: none
+  user-drag: none
+
+a[href^="http://"],
+a[href^="https://"],
+a[href^="ftp://"]
+  -webkit-user-drag: auto
+  user-drag: auto
+  cursor: pointer
+
+
+
+//----------------------
+
+
+body
+  height: 100vh
+  width: 100vw
+  font-family: sans-serif
+  display: flex
+  overflow-y: hidden
+  overflow-x: hidden
+
+
+#root
+  width: 100vw
+
+
+li
+  list-style: none
+
+
+a
+  text-decoration: none
+  height: fit-content
+  width: fit-content
+  color: black
+
+
+h2:hover
+  cursor: pointer
+
+
+a:hover
+  opacity: 1
+  text-decoration: none
+
+
+.app
+  padding: 0
+  margin: 0
+  display: grid
+  grid-template-columns: 1.3fr 5fr
+
+
+.Hello
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 20px 0
+
+
+
+// SIDEBAR
+
+#sidebar
+  height: 100vh
+  background-color: rgb(1, 9, 18)
+  padding-right: 0.1rem
+  padding-left: 0.1rem
+
+
+.active h2
+  color: #d6cdbd
+
+
+.gamebutton
+  color: #b2a580
+  font-size: 1.3rem
+  display: flex
+  align-items: center
+  margin-bottom: 0.4rem
+  max-height: 5rem
+
+
+.img-container img
+  max-height: 3rem
+  max-width: auto
+  cursor: pointer
+
+
+.League-of-Legends h2,
+.Valorant h2
+  margin-left: 1rem
+
+
+.Legends-of-Runeterra h2
+  margin-left: 0.1rem
+
+
+
+// GAME-WINDOW
+
+.window-img img
+  margin-bottom: 9rem
+
+
+.league_of_legends-img img
+  max-height: 10rem
+  margin-bottom: 8.2rem
+
+
+.valorant-img
+  max-width: 17rem
+
+
+.launch-game button
+  margin-bottom: 5rem
+  margin-left: 0.6rem
+
+
+.game-window
+  padding-left: 1rem
+  width: 100%
+
+
+.child
+  height: 100%
+  position: relative
+
+
+.child div
+  position: absolute
+  bottom: 0
+  width: 100%
+
+
+.bacon-img img
+  max-width: 23rem
+  margin-bottom: 9.4rem
+
+
+
+// TITLE-BAR
+
+.title-bar
+  display: flex
+  width: 100%
+  background-color: rgb(1, 9, 18)
+  justify-content: flex-end
+  -webkit-app-region: drag
+
+
+.controls
+  display: inline-flex
+  background-color: rgb(1, 9, 18)
+  -webkit-app-region: no-drag
+
+
+.controls div:hover
+  cursor: pointer
+
+
+
+// SETTINGS
+
+
+.notclick
+  display: none
+  position: absolute
+  align-items: center
+  justify-content: center
+  height: 100%
+  width: 100vw
+  background-color: rgb(1, 9, 18, 0.4)
+  z-index: 1
+
+
+.settings
+  background-color: rgb(1, 9, 18)
+  height: 36rem
+  width: 55rem
+  margin: auto
+  margin-top: 5rem
+  border-style: solid
+  border-color: rgb(69, 54, 20)
+  position: relative
+
+.topbar
+  width: 54rem
+  display: inline-flex
+  justify-content: flex-end
+  margin-top: 1rem
+
+
+.topbar h3
+  display: flex
+  margin-right: auto
+  font-size: 1.6rem
+  color: rgb(240, 230, 210)
+  padding-left: 0.8rem
+
+
+.topbar h3 p
+  color: rgb(142, 139, 127)
+
+
+.topbar button
+  height: 3rem
+  font-size: 0.2rem!
+  margin-top: 0.2rem
+
+
+.divider
+  align-items: center
+  justify-content: center
+  text-align: center
+  width: 98%
+  height: 1px
+  margin: auto
+  margin-top: 3px
+  background-color: rgb(29, 39, 44)
+
+
+.save-button
+  position: absolute
+  align-items: center
+  justify-content: center
+  bottom: 0
+  margin-left: 22rem
+  margin-bottom: 0.2rem
+
+
+// Settings middle view?
+
+
+.middle
+  background-color: white
+  display: grid
+  grid-template-columns: 1fr 3.2fr
+  margin-top: 0.1rem
+  height: 27rem
+
+
+.sidebar button
+  background-color: Transparent
+  background-repeat: no-repeat
+  border: none
+  cursor: pointer
+  overflow: hidden
+  outline: none
+
